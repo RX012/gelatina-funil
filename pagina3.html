@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1517977616466250');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1517977616466250&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Utmify Pixel -->
+<script>
+  window.pixelId = "6a45e80ef4a94b5d1778aad3";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<!-- Utmify UTM Capture -->
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w84wmgbpi7");
+</script>
+    <meta charset="utf-8">
+    <title>TG3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Nunito (texto) + Poppins (títulos/botão) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="style.css">
+
+<script src="/tracker.js" defer></script>
+    <!-- UTMify: captura e propaga UTMs em todo o funil -->
+        <!-- UTMify: Pixel de conversão (Purchase via UTMify, não Meta Pixel) -->
+    </head>
+
+<body>
+      <div class="row justify-content-center">
+    <div class="col-3 text-center">
+      <img src="logo.png" alt="Imagen" class="img-fluid">
+    </div>
+  </div>
+  
+    <!-- Logo fixa que anima com o scroll -->
+    <div class="main-wrapper-semlogo">
+        <!-- Barra de progresso (exemplo: de 4% até 8%) -->
+        <div class="progress-wrapper" style="--progreso-inicio: 4%; --progreso-final: 8%;">
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+            </div>
+        </div>
+
+        <h2 class="titulo-pagina">
+           ¿Cuál es tu <span>peso actual?</span>
+        </h2>
+        <p class="subtitulo-pagina">
+           ¡Ya casi terminamos! Vamos a ajustar tu plan de acuerdo con tu cuerpo. <b>Desliza para ajustar:</b>
+        </p>
+
+        <div class="peso-wrapper">
+            <div class="weight-picker">
+                <!-- Toggle KG / LB -->
+                <div class="unit-toggle-wrapper">
+                    <div class="unit-toggle">
+                        <button type="button" data-unit="kg" class="active">kg</button>
+                        <button type="button" data-unit="lb">lb</button>
+                    </div>
+                </div>
+
+                <!-- Container da régua + overlays fixos -->
+                <div class="ruler-container">
+                    <!-- Só a régua rola -->
+                    <div class="ruler-wrapper" id="rulerWrapper">
+                        <div class="ruler" id="ruler"></div>
+                    </div>
+
+                    <!-- Valor grande no topo (fixo) -->
+                    <div class="current-value">
+                        <span id="bigValue">70</span><small id="unitLabel">kg</small>
+                    </div>
+
+                    <!-- Ponteiro rosa (fixo) -->
+                    <svg viewBox="0 0 28 100" class="pointer" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16 2C16 0.89543 15.1046 0 14 0C12.8954 0 12 0.895431 12 2L12 85.4286L0 100H13.9944C13.9963 100 13.9981 100 14 100C14.0019 100 14.0037 100 14.0056 100H28L16 85.4286L16 2Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+
+                <small class="hint">Con base en esto, ajustaremos la dosis ideal para obtener los mejores resultados.</small>
+            </div>
+        </div>
+
+      
+        <a href="pagina4.html">
+            <button type="button" class="btn-model btn-model-enabled">
+                Continuar →
+            </button>
+        </a>
+        <br><br>
+
+    </div>
+
+
+
+
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Salva peso atual no localStorage antes de ir para a próxima página -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btnContinuar = document.querySelector('.btn-model.btn-model-enabled');
+
+        if (!btnContinuar) return;
+
+        btnContinuar.addEventListener('click', function (e) {
+            e.preventDefault(); // evita o redirecionamento imediato do <a>
+
+            const bigValueEl  = document.getElementById('bigValue');
+            const unitLabelEl = document.getElementById('unitLabel');
+
+            if (!bigValueEl || !unitLabelEl) {
+                console.warn('Elementos de peso não encontrados.');
+                const fallbackLink = this.closest('a');
+                const fallbackUrl  = fallbackLink ? fallbackLink.getAttribute('href') : 'pagina4.html';
+                window.location.href = fallbackUrl;
+                return;
+            }
+
+            const valor  = bigValueEl.textContent.trim();   // ex: "70"
+            const unidad = unitLabelEl.textContent.trim();  // ex: "kg" ou "lb"
+
+            // Salva separado
+            localStorage.setItem('peso_actual_valor', valor);
+            localStorage.setItem('peso_actual_unidad', unidad);
+
+            // E também em um único campo como objeto
+            const pesoObj = {
+                valor: parseFloat(valor),
+                unidad: unidad
+            };
+            localStorage.setItem('peso_actual', JSON.stringify(pesoObj));
+
+            console.log('Peso salvo no localStorage:', pesoObj);
+
+            // Redireciona para a próxima página
+            const link = this.closest('a');
+            const destino = link ? link.getAttribute('href') : 'pagina4.html';
+            window.location.href = destino;
+        });
+    });
+    </script>
+
+    <!-- Copia TODOS os parâmetros da URL atual para o link pagina4.html -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlAtual = new URL(window.location.href);
+        const searchParams = urlAtual.searchParams;
+
+        // Se não tem parâmetros, não faz nada
+        if ([...searchParams].length === 0) return;
+
+        const linksPagina10 = document.querySelectorAll('a[href^="pagina4"]');
+        if (!linksPagina10.length) return;
+
+        linksPagina10.forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href) return;
+
+            const novaUrl = new URL(href, window.location.href);
+
+            // Copia cada parâmetro da URL atual para a URL do link
+            searchParams.forEach((value, key) => {
+                if (!novaUrl.searchParams.has(key)) {
+                    novaUrl.searchParams.set(key, value);
+                }
+            });
+
+            link.setAttribute('href', novaUrl.toString());
+        });
+    });
+    </script>
+<script id="hotmart_launcher_script">
+(function(l,a,u,n,c,h,e,r){
+    l['HotmartLauncherObject']=c;
+    l[c]=l[c]||function(){
+        (l[c].q=l[c].q||[]).push(arguments)
+    },
+    l[c].l=1*new Date();
+    h=a.createElement(u),
+    e=a.getElementsByTagName(u)[0];
+    h.async=1;
+    h.src=n;
+    e.parentNode.insertBefore(h,e);
+})(window,document,'script','//launcher.hotmart.com/launcher.js','hot');
+
+hot('account','9f60cffc-7e07-33ac-8602-de69a647a860');
+</script>
+</body>
+
+</html>
+
+
+
