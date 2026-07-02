@@ -1,0 +1,2637 @@
+﻿:root {
+    --rosa-principal: #d85b72;
+    /* rosa mais fechado, menos neon */
+    --rosa-principal-grad: linear-gradient(135deg,
+            #d85b72 0%,
+            #e66e85 45%,
+            #cf455f 100%);
+    --rosa-principal-grad-hero: linear-gradient(135deg,
+            #d85b72 0%,
+            #de637d 45%,
+            #c93c57 100%);
+    --rosa-claro: #ffe7ee;
+    /* fundo bem suave */
+}
+
+body {
+    background: #fffdf6;
+    /* Amarelado sutil */
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    color: #111111;
+    font-size: 1.06rem;
+    /* ↑ um tiquinho */
+    line-height: 1.6;
+    /* mais respiro */
+    font-weight: 500;
+    margin: 0;
+}
+
+.main-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 120px 16px 100px;
+}
+
+.main-wrapper-semlogo {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 3px 16px 150px;
+}
+
+.main-wrapper-semnada{
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0px 16px 0px;
+}
+
+.main-wrapper-semfundo {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 120px 16px 0px;
+}
+
+.main-wrapper-ultimo {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px 16px 0px;
+}
+
+
+/* LOGO sempre fixa, começando centralizada */
+.logo {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    text-align: center;
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+.logo img {
+    width: 85px;
+    height: auto;
+    transition: inherit;
+}
+
+/* Quando rola a página, ela desliza pro canto esquerdo, menor e suave */
+.logo-scrolled {
+    top: 10px;
+    left: 16px;
+    transform: translateX(0) scale(0.8);
+    opacity: 0.5;
+    text-align: left;
+}
+
+/* Faixa rosa (título principal) */
+.hero-badge {
+    background: var(--rosa-principal-grad-hero);
+    color: #ffffff;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 11px 14px;
+    border-radius: 4px;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+/* Texto principal – um pouco mais bold */
+.hero-text {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    /* levemente mais forte que antes */
+    line-height: 1.4;
+}
+
+/* Destaques dentro do texto */
+.highlight {
+    color: var(--rosa-principal);
+    text-decoration: underline;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.photo-wrapper {
+    text-align: center;
+}
+
+.photo-wrapper img {
+    width: 75%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 18px;
+    display: inline-block;
+}
+
+/* Bloco de alerta principal */
+.alert-box {
+    margin-top: 24px;
+    background: var(--rosa-claro);
+    border-radius: 10px;
+    padding: 16px 16px 20px;
+    text-align: center;
+    font-size: 1.02rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 22px;
+}
+
+/* fw-bold mais suave (peso e cor) */
+.alert-box span.fw-bold {
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #c03b63;
+}
+
+/* Área fixa do botão (CTA geral) */
+.fixed-btn-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff00;
+    padding: 18px 0 22px;
+    z-index: 999;
+}
+
+.pointer-hand {
+    font-size: 1.45rem;
+    margin-bottom: 6px;
+    animation: hand-bounce 1.2s infinite;
+}
+
+@keyframes hand-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(3px);
+    }
+
+    /* menos salto */
+}
+
+.btn-cta {
+    border: none;
+    border-radius: 30px;
+    padding: 15px 24px;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--rosa-principal-grad);
+    color: #ffffff;
+    width: 90%;
+    max-width: 380px;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    animation: pulse 3s infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 107, 138, 0.4);
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 12px rgba(255, 107, 138, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 107, 138, 0);
+    }
+}
+
+
+.btn-cta-verde {
+    border: none;
+    border-radius: 30px;
+    padding: 15px 24px;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #158f1b;
+    color: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+    animation: pulse 3s infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 #47c74e;
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 12px rgba(255, 107, 138, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 107, 138, 0);
+    }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pointer-hand,
+    .btn-cta {
+        animation: none;
+    }
+
+    .option-btn,
+    .check-option-btn {
+        animation: none !important;
+    }
+}
+
+/* Barra de progresso do funil */
+.progress-wrapper {
+    margin: 18px 0 18px;
+    --progreso-inicio: 0%;
+    /* valor default */
+    --progreso-final: 50%;
+    /* valor default */
+}
+
+.progress-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #fde5ec;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 14px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: var(--progreso-inicio);
+    background: var(--rosa-principal-grad);
+    border-radius: 2px;
+    transition: width 1.2s ease;
+}
+
+.titulo-pagina {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.68rem;
+    font-weight: 700;
+    text-align: center;
+    color: #111;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.titulo-pagina-destaque {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #111;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.borda-redonda {
+    border-radius: 10px;
+}
+
+.titulo-pagina-menor {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #111;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.subtitulo-pagina {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    text-align: center;
+    color: #3f3f3f;
+    margin-top: 2px;
+}
+
+.subtitulo-pagina-vermelho {
+   font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    color: #cf0d0d;
+    margin-top: 2px;
+}
+
+.subtitulo-pagina-escuro {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.10rem;
+    font-weight: 600;
+
+    color: #1a1a1a;
+    margin-top: 2px;
+}
+
+.subtitulo-pagina-rosa {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.10rem;
+    font-weight: 600;
+    color: var(--rosa-principal);
+    margin-top: 2px;
+}
+
+
+.titulo-pagina span {
+    color: var(--rosa-principal);
+}
+
+.titulo-pagina-menor span {
+    color: var(--rosa-principal);
+}
+
+.titulo-pagina-destaque span {
+    color: rgb(238, 0, 0);
+}
+
+/* ============= GRUPO DE OPÇÕES (BOTÕES SIMPLES) ============= */
+.options-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* um pouco menos espaço */
+}
+
+.option-btn {
+    width: 100%;
+    border: 1px solid #ffd0dd;
+    border-radius: 14px;
+    background: #ffffff;
+    padding: 6px 16px 6px 10px;
+    /* menos altura + mais espaço à esquerda */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+    min-height: 75px;
+    /* um pouco mais baixo que 78 */
+}
+
+
+.option-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option-left img {
+    width: 59px;
+    height: 59px;
+    margin-left: -6px;
+    margin-top: -6px;
+    margin-bottom: -6px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Texto dos botões/checkpoints alinhado à esquerda */
+.option-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.10rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #222;
+    letter-spacing: -0.2px;
+    text-align: left;
+}
+
+.option-arrow {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--rosa-principal);
+    opacity: 0.9;
+}
+
+.option-btn:hover,
+.option-btn:focus {
+    border-color: var(--rosa-principal);
+    box-shadow: 0 6px 14px rgba(255, 107, 138, 0.2);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* ANIMAÇÃO WAVE (compartilhada) */
+@keyframes optionWave {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    40% {
+        transform: scale(1.04);
+        box-shadow: 0 8px 18px rgba(255, 107, 138, 0.26);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+    }
+}
+
+/* ============= ALERTA SUAVE COM ÍCONE SVG ============= */
+.alerta-suave {
+    background: #ffe8ef;
+    border-left: 5px solid var(--rosa-principal);
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin: 28px 0 18px;
+    box-shadow: 0 2px 8px rgba(255, 107, 138, 0.15);
+}
+
+.alerta-icone svg {
+    color: var(--rosa-principal);
+    flex-shrink: 0;
+}
+
+/* alerta-texto mais forte/legível */
+.alerta-texto {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.45;
+}
+
+/* ============= NOVOS BOTÕES COM CHECK (MULTI-SELEÇÃO) ============= */
+
+.check-options-group {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* mesmo espaçamento dos outros */
+}
+
+.check-option-btn {
+    width: 100%;
+    border: 1px solid #ffd0dd;
+    border-radius: 14px;
+    background: #ffffff;
+    padding: 10px 16px 10px 12px;
+    /* igual ao option-btn */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+    transition: border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease,
+        background-color 0.2s ease;
+    min-height: 82px;
+}
+
+
+.check-option-btn .option-left img {
+    width: 56px;
+    height: 56px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-left: -6px;
+    margin-top: -6px;
+    margin-bottom: -6px;
+}
+
+.check-mark {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 107, 138, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.check-icon {
+    width: 12px;
+    height: 8px;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transform: rotate(-45deg);
+    transition: border-color 0.2s ease;
+}
+
+/* Estado selecionado */
+.check-option-btn.is-checked {
+    background-color: #fff3f7;
+    border-color: var(--rosa-principal);
+    box-shadow: 0 6px 14px rgba(255, 107, 138, 0.25);
+}
+
+.check-option-btn.is-checked .check-mark {
+    background-color: var(--rosa-principal);
+    border-color: var(--rosa-principal);
+    transform: scale(1.05);
+}
+
+.check-option-btn.is-checked .check-icon {
+    border-color: #ffffff;
+}
+
+.check-option-btn:hover,
+.check-option-btn:focus {
+    border-color: var(--rosa-principal);
+    box-shadow: 0 6px 14px rgba(255, 107, 138, 0.2);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* ================== BOTÕES MODELO (HABILITADO / DESABILITADO) ================== */
+/* ================== BOTÕES MODELO (HABILITADO / DESABILITADO) ================== */
+.btn-model {
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    letter-spacing: 0.02em;
+    border-radius: 12px;
+    padding: 12px 18px;
+text-decoration: none;
+    /* 🔹 Largura + centralização */
+    width: 100%;
+    max-width: 380px;
+    display: flex;            /* para alinhar texto + seta */
+    align-items: center;
+    justify-content: center;
+    margin: 16px auto 0;      /* <<< CENTRALIZA HORIZONTALMENTE */
+
+    border: none;
+    text-align: center;
+    gap: 8px;
+}
+a {
+  text-decoration: none !important;
+}
+
+/* ================== HABILITADO ================== */
+.btn-model-enabled {
+    background: var(--rosa-principal-grad);
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 12px rgba(255, 107, 138, 0.45);
+    /* glow base mais visível */
+    animation: btnGlow 2.6s ease-in-out infinite;
+}
+
+
+/* ================== HABILITADO ================== */
+.btn-model-enabled-verde {
+    background: rgb(33, 116, 25);
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 12px rgb(33, 116, 25);
+    /* glow base mais visível */
+    animation: btnGlowverde 1.6s ease-in-out infinite;
+}
+
+
+/* Glow forte, próximo, concentrado e MUITO mais aparente */
+@keyframes btnGlowverde {
+    0% {
+        box-shadow:
+            0 4px 12px rgba(6, 192, 0, 0.45),
+            0 0 0 rgba(255, 107, 138, 0.0);
+    }
+
+    50% {
+        box-shadow:
+            0 4px 18px rgba(10, 255, 2, 0.45),
+            0 0 10px rgba(255, 107, 138, 0.5);
+    }
+
+    100% {
+        box-shadow:
+            0 4px 12px rgba(6, 192, 0, 0.45),
+            0 0 0 rgba(255, 107, 138, 0.0);
+    }
+}
+
+
+/* Glow forte, próximo, concentrado e MUITO mais aparente */
+@keyframes btnGlow {
+    0% {
+        box-shadow:
+            0 4px 12px rgba(255, 107, 138, 0.45),
+            0 0 0 rgba(255, 107, 138, 0.0);
+    }
+
+    50% {
+        box-shadow:
+            0 4px 18px rgba(255, 107, 138, 0.75),
+            0 0 10px rgba(255, 107, 138, 0.5);
+    }
+
+    100% {
+        box-shadow:
+            0 4px 12px rgba(255, 107, 138, 0.45),
+            0 0 0 rgba(255, 107, 138, 0.0);
+    }
+}
+
+/* ================== DESABILITADO ================== */
+.btn-model-disabled {
+    background: #f9e8ec;
+    /* leve rosa claro, mais vivo */
+    color: #b15d73;
+    /* cor coerente mas suave */
+    cursor: default;
+    opacity: 0.95;
+    border: 1px solid #f2c7d4;
+    /* borda leve para dar vida */
+    box-shadow: none;
+}
+
+/* Botão do tipo texto + emoji (sem imagem) */
+.option-btn-noimg {
+    padding: 10px 16px 10px 12px;
+    /* ↑ mais espaço em cima e embaixo */
+}
+
+/* Container do emoji + texto */
+.option-btn-noimg .option-left {
+    gap: 10px;
+}
+
+/* Emoji do botão */
+.option-emoji {
+    font-size: 1.35rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* Contêiner do texto principal do botão */
+.option-text-group {
+    display: flex;
+    flex-direction: column;
+    /* força subtítulo em nova linha */
+    justify-content: center;
+    gap: 2px;
+    /* espaço pequeno entre título e subtítulo */
+    margin-left: 2px;
+    /* pequeno ajuste fino */
+}
+
+/* Subtítulo dentro dos botões */
+/* Subtítulo dentro dos botões – versão mais forte para mobile */
+.option-subtext {
+    font-size: 0.95rem;
+    /* maior que antes */
+    font-weight: 600;
+    /* um pouco mais bold */
+    color: #2b2b2b;
+    /* bem mais escuro */
+    line-height: 1.2;
+    margin-top: 2px;
+    text-align: left;
+    display: block;
+}
+
+/* Se quiser ainda mais conforto em telas pequenas */
+@media (max-width: 480px) {
+    .option-subtext {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* BLOCO BENEFÍCIO – cartão rosa simples */
+.beneficio-box {
+    background: #fff9fb;
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin: 22px 0 18px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.02rem;
+    /* mesmo conforto do alerta-suave */
+    font-weight: 500;
+    line-height: 1.5;
+    color: #111;
+}
+
+.beneficio-box p {
+    margin: 0 0 8px;
+}
+
+/* Bold normal (preto) */
+.beneficio-bold {
+    font-weight: 700;
+}
+
+/* Bold + sublinhado (preto) */
+.beneficio-bold-underline {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Link final: vermelho + sublinhado */
+.beneficio-link {
+    font-weight: 700;
+    color: #e53935;
+    text-decoration: underline;
+}
+
+/* BLOCO ITÁLICO ESTILO SUBTÍTULO */
+.bloque-italico {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.12rem;
+    /* leve aumento para 40+ */
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.3;
+    text-align: center;
+    color: #111;
+    margin: 24px 0 26px;
+}
+
+/* Bold dentro do bloco */
+.bloque-italico .bold {
+    font-weight: 800;
+    font-style: italic;
+    /* mantém o itálico + bold */
+}
+
+
+/* CARD DE AVALIAÇÃO */
+.card-review {
+    background: #ffffff;
+    border: 1px solid #ffd9e3;
+    border-radius: 16px;
+    padding: 16px 18px 18px;
+    margin: 20px 0;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0 4px 12px rgba(255, 107, 138, 0.08);
+}
+
+/* Estrelas */
+.card-review .stars {
+    color: #ffb400;
+    /* dourado leve para avaliações */
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+/* Nome */
+.card-review .review-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 2px;
+}
+
+/* Região */
+.card-review .review-region {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Comentário */
+.card-review .review-text {
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: #222;
+    line-height: 1.45;
+}
+
+
+
+/* =========================
+   WEIGHT PICKER (RÉGUA)
+   ========================= */
+
+.weight-picker {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Toggle kg / lb */
+.unit-toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.unit-toggle {
+    display: inline-flex;
+    padding: 4px;
+    border-radius: 999px;
+    background: #f4f4f6;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.unit-toggle button {
+    border: none;
+    border-radius: 999px;
+    padding: 6px 26px;
+    font-size: 0.9rem;
+    background: transparent;
+    color: #444;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+}
+
+.unit-toggle button.active {
+    background: var(--rosa-principal);
+    color: #ffffff;
+}
+
+/* Container + régua */
+.ruler-container {
+    position: relative;
+    margin-top: 10px;
+    padding-top: 52px;
+    /* espaço para número grande */
+    padding-bottom: 34px;
+    /* espaço para o ponteiro */
+    border-bottom: 1px solid #d5d5d8;
+}
+
+/* Não deixar selecionar texto na área da régua */
+.ruler-container,
+.ruler-container * {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ruler-wrapper {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    cursor: grab;
+    height: 80px;
+}
+
+.ruler-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.ruler-wrapper.dragging {
+    cursor: grabbing;
+}
+
+.ruler {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+}
+
+/* cada “risquinho” */
+.tick {
+    flex: 0 0 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.tick-line {
+    width: 1px;
+    background: #d0d0d3;
+}
+
+.tick--small .tick-line {
+    height: 14px;
+}
+
+.tick--medium .tick-line {
+    height: 22px;
+}
+
+.tick--big .tick-line {
+    height: 40px;
+}
+
+.tick--big {
+    flex-direction: column;
+    align-items: center;
+}
+
+.tick-label {
+    font-size: 0.95rem;
+    margin-top: 5px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Valor grande no topo */
+.current-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    font-weight: 700;
+    color: #111111;
+    font-size: 2.6rem;
+    line-height: 1;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.current-value small {
+    font-size: 1.1rem;
+    margin-left: 4px;
+}
+
+/* Ponteiro central rosa */
+.pointer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    color: var(--rosa-principal);
+    width: 28px;
+    height: 100px;
+}
+
+/* Texto “Desliza para ajustar” */
+.hint {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #9b9b9f;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* =========================
+   BLOCO DE ANÁLISIS (12s)
+   ========================= */
+.analisis-wrapper {
+    background: #fff9fb;
+    border-radius: 18px;
+    padding: 18px 18px 20px;
+    margin: 26px 0 18px;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0 6px 18px rgba(255, 107, 138, 0.15);
+    border: 1px solid #ffd6e4;
+}
+
+.analisis-header {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.analisis-eyebrow {
+    display: inline-block;
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #c03b63;
+    background: #ffe5f0;
+    padding: 4px 8px;
+    border-radius: 999px;
+}
+
+.analisis-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #111;
+    margin: 10px 0 4px;
+}
+
+.analisis-title span {
+    color: var(--rosa-principal);
+}
+
+.analisis-subtitle {
+    font-size: 0.98rem;
+    color: #444;
+    margin: 0;
+}
+
+/* Loader circular */
+.analisis-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 18px 0 8px;
+}
+
+.analisis-spinner {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #111;
+    box-shadow: 0 0 18px rgba(255, 107, 138, 0.3);
+}
+
+/* só o anel gira */
+.analisis-spinner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 4px solid #ffd4e2;
+    border-top-color: var(--rosa-principal);
+    animation: spinLoader 1s linear infinite;
+}
+
+@keyframes spinLoader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* texto fica fixo, sem rotação */
+.analisis-spinner span {
+    position: relative;
+    z-index: 1;
+}
+
+.analisis-loader-text {
+    margin-top: 10px;
+    font-size: 0.92rem;
+    color: #555;
+    text-align: center;
+    max-width: 260px;
+}
+
+/* Lista de passos */
+.analisis-steps {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.analisis-step {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 10px 10px 8px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #ffd6e4;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.step-icon {
+    flex-shrink: 0;
+    padding-top: 4px;
+}
+
+.step-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 107, 138, 0.6);
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-dot::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 107, 138, 0.0);
+    transition: background 0.2s ease;
+}
+
+/* Conteúdo do passo */
+.step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.step-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #c03b63;
+}
+
+.step-title {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.step-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Estado ATIVO */
+.analisis-step.is-active {
+    border-color: var(--rosa-principal);
+    background: #fff3f8;
+    box-shadow: 0 4px 14px rgba(255, 107, 138, 0.2);
+    transform: translateY(-1px);
+}
+
+.analisis-step.is-active .step-dot {
+    border-color: var(--rosa-principal);
+}
+
+.analisis-step.is-active .step-dot::after {
+    background: var(--rosa-principal);
+}
+
+/* Estado CONCLUÍDO */
+.analisis-step.is-done {
+    border-color: #c3e7c8;
+    background: #f0fff2;
+}
+
+.analisis-step.is-done .step-dot {
+    border-color: #2e7d32;
+}
+
+.analisis-step.is-done .step-dot::after {
+    width: 10px;
+    height: 6px;
+    border-radius: 0;
+    background: transparent;
+    border-left: 2px solid #2e7d32;
+    border-bottom: 2px solid #2e7d32;
+    transform: rotate(-45deg);
+}
+
+.analisis-step.is-done .step-label {
+    color: #2e7d32;
+}
+
+.analisis-footnote {
+    margin-top: 12px;
+    font-size: 0.86rem;
+    color: #777;
+    text-align: left;
+}
+
+.analisis-title-simple {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #111;
+    text-align: left;
+    margin: 0 0 12px;
+}
+
+.analisis-title-simple span {
+    color: var(--rosa-principal);
+}
+
+/* =========================
+   BLOCO: ALERTA DE RIESGO / IMC
+   ========================= */
+
+.riesgo-wrapper {
+    margin: 28px 0 22px;
+    padding-top: 4px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* linha fina em degradê para chamar atenção, sem virar card */
+.riesgo-topline {
+    width: 100%;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg,
+            #fed7e2 0%,
+            #fb7185 45%,
+            #b91c1c 100%);
+    margin-bottom: 12px;
+}
+
+/* cabeçalho com ícone + título */
+.riesgo-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.riesgo-icon-circle {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: #fee2e2;
+    color: var(--rosa-principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.riesgo-title-group {
+    flex: 1;
+}
+
+.riesgo-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #b91c1c;
+    margin-bottom: 2px;
+}
+
+.riesgo-title {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.32;
+    color: #09090b;
+    margin: 0;
+    font-weight: 800;
+}
+
+.riesgo-title u {
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(9, 9, 11, 0.9);
+}
+
+.riesgo-title .riesgo-accent {
+    color: #fb7185;
+}
+
+/* texto explicativo */
+.riesgo-text {
+    font-size: 1.05rem;
+    color: #0c0d0e;
+    margin: 6px 0 10px;
+}
+
+.riesgo-text strong {
+    font-weight: 800;
+}
+
+/* barra de risco */
+.riesgo-scale {
+    margin-top: 4px;
+    font-size: 0.9rem;
+}
+
+.riesgo-scale-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7f1d1d;
+    margin-bottom: 6px;
+}
+
+.riesgo-scale-bar-wrapper {
+    position: relative;
+    margin-bottom: 6px;
+    border-radius: 12px;
+    animation: riesgoPulse 2.2s infinite ease-in-out;
+    overflow: visible;
+    /* 👈 IMPORTANTE para mostrar o marcador por cima */
+}
+
+.riesgo-scale-bar {
+    width: 100%;
+    height: 16px;
+    border-radius: 999px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+/* segmentos da barra */
+.riesgo-segment {
+    flex: 1;
+}
+
+.riesgo-seg-low {
+    background: linear-gradient(90deg, #bbf7d0 0%, #4ade80 100%);
+}
+
+.riesgo-seg-mid {
+    background: linear-gradient(90deg, #fde68a 0%, #f97316 100%);
+}
+
+.riesgo-seg-high {
+    background: linear-gradient(90deg, #fb7185 0%, #b91c1c 100%);
+}
+
+/* Marcador completo (“Tú”) */
+.riesgo-marker {
+    position: absolute;
+    top: -40px;
+    /* sobe o bloco todo até encaixar certinho */
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+/* Bolha “Tú” maior e mais chamativa */
+.riesgo-marker-label {
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.6);
+}
+
+/* Linha vertical agora desce para dentro da barra */
+.riesgo-marker-line {
+    width: 3px;
+    height: 16px;
+    /* EXATAMENTE igual à altura da barra */
+    background: #dc2626;
+    border-radius: 999px;
+    margin-top: 4px;
+    /* espaço entre o “Tú” e a linha */
+}
+
+/* legenda abaixo da barra */
+.riesgo-scale-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #4b5563;
+    margin-bottom: 4px;
+}
+
+.riesgo-result {
+    font-size: 0.9rem;
+    color: #111827;
+}
+
+.riesgo-result strong {
+    font-weight: 800;
+}
+
+.riesgo-title {
+    font-size: 1.34rem;
+    /* antes 1.22rem */
+}
+
+@media (max-width: 420px) {
+    .riesgo-title {
+        font-size: 1.26rem;
+    }
+}
+
+/* =========================
+   ANIMAÇÃO DE ALERTA (PULSO)
+   ========================= */
+@keyframes riesgoPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        background-color: rgba(254, 202, 202, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 0 15px 4px rgba(239, 68, 68, 0.55);
+        background-color: rgba(254, 226, 226, 0.65);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+        background-color: rgba(254, 202, 202, 0.35);
+    }
+}
+
+/* ============================
+   CARD – ZONA DE ALERTA
+   ============================ */
+
+/* ============================
+   ZONA DE ALERTA – FULL WIDTH
+   ============================ */
+
+/* Fundo amarelo ocupa 100% da tela */
+.alerta-zona-full {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+
+    background: #fff7d6;
+    /* amarelo bem suave */
+    padding: 14px 0 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.15);
+}
+
+/* Conteúdo segue o mesmo grid da página (480px + padding lateral) */
+.alerta-zona-inner {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Cabeçalho: ícone + título */
+.alerta-zona-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+/* Ícone arredondado, moderno */
+.alerta-zona-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: #fef3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.alerta-zona-icon i {
+    font-size: 22px;
+    color: #dc2626;
+    /* vermelho alerta */
+}
+
+/* Título levemente maior */
+.alerta-zona-title {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    color: #dc2626;
+}
+
+/* Texto do conteúdo */
+.alerta-zona-content p {
+    margin: 6px 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.5;
+    color: #111;
+}
+
+/* Destaque em negrito dentro do texto */
+.alerta-zona-content p strong {
+    font-weight: 800;
+}
+
+
+
+/* Em telas muito pequenas, dá um respiro */
+@media (max-width: 420px) {
+    .alerta-zona-title {
+        font-size: 1.15rem;
+    }
+
+    .alerta-zona-content p {
+        font-size: 1rem;
+    }
+}
+
+/* ============================
+   CARD – SIGNOS DE ALERTA
+   ============================ */
+/* CARD – Signos de alerta (topo vermelho, base branca) */
+.alerta-signos-card {
+    border-radius: 18px;
+    overflow: hidden;
+    /* mantém o raio contínuo */
+    border: 1px solid rgba(248, 113, 113, 0.45);
+    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.10);
+    margin: 18px 0 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Topo – fundo vermelho claro + título + ❌ */
+.alerta-signos-top {
+    background: #fee2e2;
+    padding: 14px 16px 10px;
+}
+
+/* Base – fundo branco + ✅ */
+.alerta-signos-bottom {
+    background: #ffffff;
+    padding: 10px 16px 14px;
+}
+
+/* Cabeçalho */
+.alerta-signos-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.alerta-signos-icon-main {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: #fef2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.alerta-signos-icon-main i {
+    font-size: 22px;
+    color: #dc2626;
+}
+
+.alerta-signos-title {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.08rem;
+    color: #b91c1c;
+}
+
+/* Conteúdo (listas) */
+.alerta-signos-content {
+    margin-top: 4px;
+}
+
+.alerta-signos-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 4px 0;
+}
+
+.alerta-signos-bullet {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* ❌ – negativos (topo) */
+.alerta-signos-item-neg .alerta-signos-bullet {
+    background: #fee2e2;
+}
+
+.alerta-signos-item-neg .alerta-signos-bullet i {
+    font-size: 18px;
+    color: #dc2626;
+}
+
+/* ✅ – positivos (base branca) */
+.alerta-signos-bullet-pos {
+    background: #dcfce7;
+}
+
+.alerta-signos-item-pos .alerta-signos-bullet-pos i {
+    font-size: 18px;
+    color: #16a34a;
+}
+
+.alerta-signos-item p {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.45;
+    color: #111111;
+}
+
+/* Divisor suave entre ❌ e ✅, mas dentro do mesmo card */
+.alerta-signos-divider-soft {
+    height: 1px;
+    margin: 4px 0 8px;
+    background: linear-gradient(90deg,
+            rgba(248, 113, 113, 0.0),
+            rgba(248, 113, 113, 0.7),
+            rgba(248, 113, 113, 0.0));
+}
+
+/* Ajustes mobile */
+@media (max-width: 420px) {
+    .alerta-signos-title {
+        font-size: 1.05rem;
+    }
+
+    .alerta-signos-item p {
+        font-size: 0.96rem;
+    }
+}
+
+/* ====== GRÁFICO DE PESO (RESPONSIVO) ====== */
+.peso-chart-full svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    display: block;
+    font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ====== SEÇÃO DE COMENTÁRIOS COM IMAGEM ====== */
+
+.testimonials-section {
+    margin: 28px 0 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.testimonials-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.testimonials-subtitle {
+    font-size: 0.98rem;
+    color: #555;
+    margin-bottom: 14px;
+}
+
+/* Card individual */
+.testimonial-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 12px 14px 14px;
+    border: 1px solid #f3d3df;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    margin-bottom: 12px;
+}
+
+/* Avatar redondo */
+.testimonial-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid #ffe0ec44;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Conteúdo do depoimento */
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial-stars {
+    color: #ffb400;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.testimonial-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 2px;
+}
+
+.testimonial-region {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.testimonial-text {
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: #222;
+    line-height: 1.45;
+}
+
+/* Ajuste em telas bem pequenas */
+@media (max-width: 420px) {
+    .testimonial-card {
+        padding: 12px 12px 14px;
+    }
+
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* ====== CARDS LADO A LADO (TIPO DE CUERPO) ====== */
+
+.bodytype-group {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bodytype-card {
+    flex: 1 1 calc(50% - 6px);
+    /* 2 por linha */
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #f3d3df;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-width: 1px;
+
+    /* reset do botão */
+    outline: none;
+}
+
+/* retira estilo padrão do button */
+.bodytype-card,
+.bodytype-card:focus {
+    border-style: solid;
+    background-clip: padding-box;
+}
+
+/* imagem em cima */
+.bodytype-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* parte de baixo: texto + seta */
+.bodytype-card-bottom {
+    padding: 8px 12px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bodytype-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #111;
+}
+
+/* bolinha com seta */
+.bodytype-arrow {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    border: 1px solid #d4d4d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    color: #6b7280;
+    background: #f9fafb;
+}
+
+/* hover */
+.bodytype-card:hover {
+    border-color: var(--rosa-principal);
+    box-shadow: 0 6px 16px rgba(255, 107, 138, 0.20);
+    transform: translateY(-2px);
+}
+
+/* em telas muito estreitas, deixa 1 por linha se quiser */
+@media (max-width: 360px) {
+    .bodytype-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* =========================
+   ETAPA: NOMBRE
+   ========================= */
+
+.name-step-wrapper {
+    margin: 22px 0 18px;
+}
+
+/* Card no mesmo "feeling" de .beneficio-box / .card-review */
+.name-step-card {
+    padding: 16px 16px 18px;
+    text-align: center;
+}
+
+/* Título parecido com outros títulos da página */
+.name-step-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #111111;
+    line-height: 1.3;
+    margin: 0 0 10px;
+}
+
+/* Input redondo, borda rosa clara, mesma vibe dos botões */
+.name-input {
+    border-radius: 999px;
+    border: 1px solid #ffd0dd;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.name-input::placeholder {
+    color: #9b9b9b;
+    opacity: 1;
+}
+
+.name-input:focus {
+    border-color: var(--rosa-principal);
+    box-shadow: 0 0 0 2px rgba(216, 91, 114, 0.25);
+    outline: none;
+}
+
+/* Texto de apoio pequeno, mesma pegada dos outros textos auxiliares */
+.name-step-helper {
+    margin: 8px 0 14px;
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.4;
+}
+
+/* Botão igual ao estilo dos botões principais (gradiente rosa) */
+.name-step-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 999px;
+    border: none;
+    padding: 0.8rem 1rem;
+    font-family: 'Poppins', 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    background: var(--rosa-principal-grad);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(255, 107, 138, 0.45);
+    cursor: pointer;
+    transition:
+        transform 0.12s ease,
+        box-shadow 0.12s ease,
+        filter 0.12s ease;
+}
+
+.name-step-btn:hover,
+.name-step-btn:focus {
+    filter: brightness(1.03);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(255, 107, 138, 0.55);
+    outline: none;
+}
+
+/* Versão sem animação se o usuário preferir menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    .name-step-btn {
+        animation: none;
+        transform: none !important;
+    }
+}
+
+/* Ajustes leves em telas menores */
+@media (max-width: 420px) {
+    .name-step-card {
+        padding: 14px 14px 16px;
+    }
+
+    .name-step-title {
+        font-size: 1.28rem;
+    }
+
+    .name-step-helper {
+        font-size: 1rem;
+    }
+}
+
+
+.faq-section {
+    margin: 28px 0 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.faq-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.32rem;
+    font-weight: 800;
+    color: #111;
+    margin: 0 0 6px;
+    text-align: left;
+}
+
+.faq-subtitle {
+    font-size: 1.0rem;
+    color: #555;
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Card de cada pergunta */
+.faq-item {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #f3d3df;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Linha clicável (pergunta) */
+.faq-question-row {
+    width: 100%;
+    padding: 12px 14px 12px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Ícone redondo à esquerda */
+.faq-icon-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: #fff1f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--rosa-principal);
+}
+
+.faq-icon-circle i {
+    font-size: 20px;
+}
+
+/* Texto da pergunta */
+.faq-question-text {
+    flex: 1;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.4;
+}
+
+/* Ícone de abrir/fechar à direita */
+.faq-toggle-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    border: 1px solid #e4d2dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #faf5ff;
+    margin-left: 6px;
+}
+
+.faq-toggle-icon i {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+/* Resposta (conteúdo colapsável) */
+.faq-answer-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 14px;
+    transition: max-height 0.26s ease, padding-bottom 0.22s ease, opacity 0.22s ease;
+    opacity: 0;
+}
+
+.faq-answer {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: #222;
+    margin: 4px 0 12px;
+}
+
+/* Estado ABERTO */
+.faq-item.is-open {
+    border-color: var(--rosa-principal);
+    box-shadow: 0 6px 16px rgba(255, 107, 138, 0.18);
+    transform: translateY(-1px);
+}
+
+.faq-item.is-open .faq-answer-wrapper {
+    max-height: 400px; /* suficiente para 2–3 linhas de texto */
+    padding-bottom: 10px;
+    opacity: 1;
+}
+
+/* Troca de ícone quando aberto */
+.faq-item.is-open .faq-toggle-icon {
+    background: #fff;
+    border-color: rgba(255, 107, 138, 0.5);
+}
+
+.faq-item.is-open .faq-toggle-icon i {
+    color: var(--rosa-principal);
+}
+
+/* Ajuste em telas bem pequenas */
+@media (max-width: 420px) {
+    .faq-question-row {
+        padding: 10px 12px;
+    }
+    .faq-question-text {
+        font-size: 1.0rem;
+    }
+    .faq-answer {
+        font-size: 0.96rem;
+    }
+}
+
+
+
+/* ====== CARD PREÇO: "Plan Personalizado + Bonos especiales" ====== */
+
+.plan-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    padding: 12px 14px;
+    margin: 18px 0 8px;
+
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+    font-family: 'Nunito', sans-serif;
+}
+
+/* lado esquerdo: texto do plano */
+.plan-strip-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-strip-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: #0b1120;
+    line-height: 1.2;
+}
+
+.plan-strip-subtitle {
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.25;
+}
+
+/* lado direito: "pill" de preço */
+.plan-strip-price {
+    min-width: 105px;
+    padding: 8px 10px;
+    border-radius: 16px;
+    background: #f3f4f6;
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.plan-strip-from {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 2px;
+}
+
+.plan-strip-amount {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.1;
+}
+
+.plan-strip-period {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: capitalize;
+    margin-top: 2px;
+}
+
+/* hover leve pra parecer clicável (se for CTA) */
+.plan-strip:hover {
+    border-color: var(--rosa-principal);
+    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.08);
+    transform: translateY(-1px);
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+}
+
+/* ajuste mobile bem estreito */
+@media (max-width: 360px) {
+    .plan-strip {
+        padding: 10px 10px;
+    }
+
+    .plan-strip-title {
+        font-size: 0.98rem;
+    }
+
+    .plan-strip-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .plan-strip-amount {
+        font-size: 1.32rem;
+    }
+}
+
+/* =========================
+   BLOCO – AVALIAÇÕES / CARROSSEL
+   ========================= */
+
+/* ===== RESUMO DAS AVALIAÇÕES ===== */
+.reviews-rating-summary {
+    margin: 26px 0 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.reviews-rating-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviews-rating-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.reviews-rating-count {
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.reviews-rating-stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.05rem;
+}
+
+.reviews-rating-stars i {
+    color: #ffb400;
+    font-size: 1.1rem;
+}
+
+.reviews-rating-score {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #111827;
+    margin-left: 4px;
+}
+
+.reviews-rating-score-max {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-left: 1px;
+}
+
+/* ===== CARROSSEL DE AVALIAÇÕES ===== */
+.reviews-carousel-section {
+    margin: 10px 0 24px;
+}
+
+/* Container Swiper */
+.reviews-swiper {
+    width: 100%;
+    padding: 4px 0 6px;
+}
+
+/* Cada slide ocupa a maior parte da tela, com pedaços dos lados visíveis */
+.reviews-swiper .swiper-slide {
+    width: 82%;
+    max-width: 420px;
+}
+
+@media (max-width: 420px) {
+    .reviews-swiper .swiper-slide {
+        width: 88%;
+    }
+}
+
+/* CARD DE AVALIAÇÃO NO CARROSSEL */
+.review-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #f3d3df;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Imagem 1:1, sem distorcer */
+/* IMAGEM 1:1 TOTALMENTE LARGA NO CARD */
+.review-image {
+    width: 100%;
+    padding-top: 100%;         /* deixa a imagem quadrada e gigante */
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+.review-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* mantém 1:1 perfeito */
+}
+
+/* Texto do depoimento */
+.review-body {
+    max-width: 100%;
+}
+
+.review-name-age {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: var(--rosa-principal);
+    margin-bottom: 6px;
+}
+
+.review-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.5;
+    color: #111111;
+}
+
+/* Pequeno ajuste para telas bem pequenas */
+@media (max-width: 420px) {
+    .review-card {
+        padding: 14px 14px 16px;
+    }
+    .review-text {
+        font-size: 0.98rem;
+    }
+}
+/* ===== GARANTIR QUE TODOS OS CARDS TENHAM A MESMA ALTURA ===== */
+
+/* O Swiper slide deve ter altura automática mas todos iguais */
+.reviews-swiper .swiper-slide {
+    display: flex;                  /* permite equalizar a altura */
+    height: auto;
+}
+
+/* O card cresce para ocupar o mesmo espaço que os outros */
+.review-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* O texto se adapta sem quebrar o layout */
+.review-body {
+    flex-grow: 1;                  /* força todos os cards a preencher igualmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+  /* ===== WIDGET SUPORTE – POSICIONAMENTO ===== */
+  #support-chat-widget{
+    position:fixed;
+    bottom:25px;
+    right:16px;
+    z-index:9999;
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    display:none; /* 🔹 começa escondido */
+  }
+
+#support-chat-button{
+  width:56px;
+  height:56px;
+  border-radius:999px;
+  border:none;
+  background:transparent;   /* 🔴 sem fundo */
+  box-shadow:none;          /* sem sombra de botão */
+  padding:0;
+  cursor:pointer;
+}
+
+#support-chat-button img{
+  width:56px;
+  height:56px;
+  border-radius:50%;        /* foto redonda */
+  object-fit:cover;         /* garante que a imagem preencha o círculo */
+  display:block;
+}
+
+
+#support-chat-preview{
+  position:absolute;
+  right:72px;
+  bottom:16px;
+
+  background:#ffffff;
+  border-radius:20px;
+  box-shadow:0 8px 18px rgba(15,23,42,.22);
+
+  /* 👉 deixa o card maior e mais confortável */
+  padding:10px 18px;
+  min-width:220px;    /* largura mínima fixa do balão */
+  max-width:280px;    /* se o texto for grande, quebra em 2–3 linhas */
+
+  display:block;
+  font-size:13px;
+  line-height:1.4;
+  color:#111827;
+  text-align:left;
+  white-space:normal;
+
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(8px);
+  transition:opacity .25s ease, transform .25s ease;
+}
+
+  #support-chat-preview.show{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateY(0);
+  }
+
+#support-chat-preview{
+  position:absolute;
+  right:72px;
+  bottom:10px;
+  background:#ffffff;
+  border-radius:18px;
+  box-shadow:0 8px 18px rgba(15,23,42,.22);
+  padding:8px 12px;
+  max-width:220px;
+  font-size:13px;
+  color:#111827;
+  opacity:0;
+  line-height:1.1;
+  pointer-events:none;
+  transform:translateY(8px);
+  transition:opacity .25s ease, transform .25s ease;
+}
+#support-chat-preview.show{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateY(0);
+}
+
+.support-chat-preview-msg{
+  display:block;
+  white-space:normal;
+  line-height:1.1;
+  margin:0;
+  padding:0;
+}
+
+.support-chat-preview-msg{
+    color:#111827;
+    white-space:normal;
+    font-size: 18px !important;
+    line-height:1.1;
+    display:block;
+    margin:0;
+    padding:0;
+}
+
+  /* JANELA DO CHAT */
+  #support-chat-container{
+    position:fixed;
+    bottom:88px;
+    right:16px;
+    width:100%;
+    max-width:420px;
+    height:70vh;
+    max-height:540px;
+    background:#ffffff;
+    border-radius:16px;
+    box-shadow:0 20px 40px rgba(15,23,42,.35);
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+  }
+  
+  /* NOVO: botão de minimizar por cima do iframe */
+#support-chat-minimize{
+  position:absolute;
+  top:6px;
+  right:8px;
+  z-index:10;
+  border:none;
+  background:rgba(0,0,0,.35);
+  color:#f9fafb;
+  font-size:18px;
+  width:26px;
+  height:26px;
+  border-radius:999px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+  .support-chat-header{
+    padding:8px 10px;
+    background:#075e54;
+    color:#f9fafb;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .support-chat-header-left{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .support-chat-header-avatar{
+    width:32px;
+    height:32px;
+    border-radius:999px;
+    object-fit:cover;
+  }
+  .support-chat-header-title{
+    font-size:14px;
+    font-weight:600;
+  }
+  .support-chat-header-sub{
+    font-size:11px;
+    color:#bbf7d0;
+  }
+  #support-chat-minimize{
+    border:none;
+    background:transparent;
+    color:#f9fafb;
+    font-size:20px;
+    cursor:pointer;
+    padding:0 4px;
+  }
+  .support-chat-body{
+    flex:1;
+    background:#f3f4f6;
+  }
+  #support-chat-iframe{
+    width:100%;
+    height:100%;
+    border:none;
+  }
+
+
+#support-chat-badge{
+    position:absolute;
+    top:-4px;
+    right:-4px;
+    background:#ef4444; /* vermelho */
+    color:white;
+    width:20px;
+    height:20px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px solid white; /* borda branca bonita */
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+    pointer-events:none; /* não atrapalha clique */
+}
+
+  @media (max-width: 600px){
+    #support-chat-container{
+      right:8px;
+      left:8px;
+      width:auto;
+      max-width:none;
+      height:80vh;
+      bottom:80px;
+    }
+    #support-chat-widget{
+      right:8px;
+      bottom:12px;
+    }
+    #support-chat-button{
+      width:52px;
+      height:52px;
+    }
+  }
+
